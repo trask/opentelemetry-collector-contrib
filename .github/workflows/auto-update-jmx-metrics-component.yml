@@ -10,8 +10,8 @@ jobs:
   check-versions:
     runs-on: ubuntu-latest
     outputs:
-      current-version: ${{ steps.check-versions.outputs.current-version }}
       latest-version: ${{ steps.check-versions.outputs.latest-version }}
+      already-added: ${{ steps.check-versions.outputs.already-added }}
       already-opened: ${{ steps.check-versions.outputs.already-opened }}
     steps:
       - uses: actions/checkout@v3

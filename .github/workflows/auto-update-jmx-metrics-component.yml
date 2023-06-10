@@ -44,7 +44,7 @@ jobs:
           fi
 
           echo "latest-version=$latest_version" >> $GITHUB_OUTPUT
-          echo "already-added=already_added" >> $GITHUB_OUTPUT
+          echo "already-added=$already_added" >> $GITHUB_OUTPUT
           echo "already-opened=$already_opened" >> $GITHUB_OUTPUT
 
   update-jmx-metrics-component:
@@ -91,7 +91,7 @@ jobs:
 
           cc @open-telemetry/java-contrib-approvers
           "
-          branch="opentelemetrybot/add-jmx-metrics-gatherer-${JMX_METRICS_VERSION}"
+          branch="opentelemetrybot/add-jmx-metrics-gatherer-${VERSION}"
 
           git checkout -b $branch
           git commit -a -m "$message"
